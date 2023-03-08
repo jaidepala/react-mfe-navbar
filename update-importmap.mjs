@@ -5,7 +5,7 @@ import https from "https";
 
 const importMapFilePath = path.resolve(process.cwd(), "importmap.json");
 const importMap = JSON.parse(fs.readFileSync(importMapFilePath));
-const url = `https://react-mfe-demo.s3-us-west-2.amazonaws.com/%40altusgroup/single-spa-demo-nav/${process.env.TRAVIS_COMMIT}/altusgroup-single-spa-demo-nav.js`;
+const url = `https://react-mfe-demo.s3-us-east-1.amazonaws.com/%40altusgroup/single-spa-demo-nav/${process.env.TRAVIS_COMMIT}/altusgroup-single-spa-demo-nav.js`;
 
 https
     .get(url, res => {
